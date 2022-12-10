@@ -12,7 +12,6 @@ function tinhDiemTrungBinh(a) {
     }
 function main() {
     const a = new Array(4) 
-    console.log(a[0])
     nhapMang(a)
     let k = tinhDiemTrungBinh(a) 
     console.log(k)
