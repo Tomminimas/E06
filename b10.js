@@ -4,20 +4,21 @@ function nhapMang(a) {
         a[i] = Number(readline.question('Nhap so: '))
     }
 }
-function tinhTongAm(a) {
-    let s = 0
+
+function soAmDauTien(a) {
     for (let i = 0; i < a.length; i++) {
-        if (a[i] < 0)
-            s = s + a[i]
+        if(a[i] < 0) {
+            console.log('So am dau tien la: ');
+        }
+        }   
+    return a[i]  
     }
-    return s
-}
 
 function main() {
     const n = Number(readline.question("Nhap so luong phan tu: "))
     const a = new Array(n)
     nhapMang(a)
-    console.log(tinhTongAm(a))
+    soAmDauTien(a)
 }
 
 main()

@@ -4,11 +4,23 @@ function nhapMang(a) {
         a[i] = Number(readline.question('Nhap so: '))
     }
 }
-function tinhTongAm(a) {
+
+function kiemtraSNT(a) {
+    for (let i = 2; i <= Math.sqrt(a); i++) {
+        if (a < 2) {
+            return false;
+        }
+        if ( a % i === 0) 
+          return false;
+        }
+       return true;
+}
+
+function tichSNT(a) {
     let s = 0
     for (let i = 0; i < a.length; i++) {
-        if (a[i] < 0)
-            s = s + a[i]
+        if (kiemtraSNT(a) > 0)
+            s = a[i] * a[i]
     }
     return s
 }
@@ -17,7 +29,8 @@ function main() {
     const n = Number(readline.question("Nhap so luong phan tu: "))
     const a = new Array(n)
     nhapMang(a)
-    console.log(tinhTongAm(a))
+    kiemtraSNT(a) 
+    console.log(tichSNT(a))
 }
 
 main()

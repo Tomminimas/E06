@@ -17,12 +17,14 @@ function kiemtraSNT(a) {
 }
 
 
-function lietKeSNT(a) {
+function demSNT(a) {
+    count = 0
     for (let i = 0; i < a[i]; i++) {
         if (kiemtraSNT(a) == true) {
-            console.log('So nguyen to la', a[i]);
+            count++;
         }
     }
+    return count;
 }
 
 function main() {
@@ -30,7 +32,8 @@ function main() {
     const a = new Array(n)
     nhapMang(a)
     kiemtraSNT(a) 
-    lietKeSNT(a)
+    let dem = demSNT(a);
+    console.log('So luong SNT trong mang: ', dem);
 }
 
 main()
