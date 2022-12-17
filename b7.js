@@ -6,10 +6,10 @@ function nhapMang(a) {
 }
 
 function kiemtraSNT(a) {
+    if (a < 2) {
+        return false;
+    }
     for (let i = 2; i <= Math.sqrt(a); i++) {
-        if (a < 2) {
-            return false;
-        }
         if ( a % i === 0) 
           return false;
         }
@@ -17,10 +17,10 @@ function kiemtraSNT(a) {
 }
 
 function tichSNT(a) {
-    let s = 0
+    let s = 1
     for (let i = 0; i < a.length; i++) {
         if (kiemtraSNT(a) > 0)
-            s = a[i] * a[i]
+            s = s * a[i]
     }
     return s
 }
