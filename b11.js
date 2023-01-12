@@ -5,9 +5,20 @@ function nhapMang(a) {
     }
 }
 
-function soAmDauTien(a) {
+function kiemtraSNT(a) {
+    if (a < 2) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(a); i++) {
+        if ( a % i === 0) 
+          return false;
+    }
+    return true;
+}
+
+function SNTdautien(a) {
     for (let i = 0; i < a.length; i++) {
-        if(a[i] < 0) {
+        if (kiemtraSNT(a[i]) == true) {
             return a[i]  
         }
         }   
@@ -18,8 +29,8 @@ function main() {
     const n = Number(readline.question("Nhap so luong phan tu: "))
     const a = new Array(n)
     nhapMang(a)
-    let b = soAmDauTien(a)
-    console.log('So am dau tien la: ', b)
+    let b = SNTdautien(a) 
+    console.log('So nguyen to dau tien la: ',b)
 }
 
 main()
